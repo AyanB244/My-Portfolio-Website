@@ -1,0 +1,244 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+}
+
+/*overall text size*/
+html{
+    font-size: 64%;
+}
+
+/*colors for text and BG*/
+body {
+    /*width: 100%;*/
+    /*height: 100vh;*/
+    /*overflow-x: hidden;*/
+    background-color: #720137;
+    color: white;
+}
+
+/*header bar*/
+header{
+   /* margin-top: 20px;*/
+    position: fixed;
+   /* top: 0;*/
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: #5E0009;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+/*logo and nav links*/
+.logo{
+    font-size: 3rem;
+    color: #DF1F72;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+
+nav a:hover {
+    color: rgb(255, 0, 144);
+    border-bottom: 3px solid rgb(194, 5, 100);
+}
+
+/*NOTE: Should remove the hover underline and make text increase in size. Make the light bulb glows into a color*/
+
+@media (max-width: 995px){
+    nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px;
+        border-bottom: 3px;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #720137;
+        border-top: 0.1rem solid;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+nav a:hover,
+nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    }
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    padding-top: 10rem;
+}
+
+/*body settings*/
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home .home-content h1{
+    margin-bottom: 1rem;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #E506A2;
+}
+
+.home-content .intro{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.home-content .tagline{
+    font-size: 2.1rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.home-content .highlight {
+    color: #ff21bd;
+    font-weight: 700;
+}
+
+.home-content h2{
+    font-size: 2.2rem;
+    font-weight: 700; 
+}
+
+
+/*social media icons*/
+.social-icons img {
+    width: 40px;      /* adjust this */
+    height: auto;     /* keeps aspect ratio */
+    margin-right: 1.3rem;
+    margin-top: 1.2rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.8rem;
+    background-color: #DF1F72;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #C10564;
+    transform: scale(1.05);
+}
+
+/* About section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    padding-top: 10rem;
+}
+
+/* Left side - text */
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #E506A2;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+/*skill list columns*/
+.skills-list {
+    columns: 2;
+    list-style: none;
+    margin-top: 1rem;
+    column-gap: 2rem;
+    max-width: 450px;
+}
+
+.skills-list li {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
+}
+
+.skills-list li::before {
+    content: "▶ ";
+    color: #DF1F72;
+    margin-right: 0.5rem;
+}
+
+/* Right side - image */
+.about-image {
+    flex: 0 0 300px;
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.about-image img {
+    width: 100%;
+    height:fit-content;
+    border-radius: 1rem;
+}
