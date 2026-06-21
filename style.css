@@ -577,3 +577,21 @@ footer {
     color: white;
 }
 
+/* ---- Light mode ---- */
+body.light-mode {
+    background-color: #FFF5F9;
+    color: #3D0017;
+}
+
+body.light-mode header {
+    background-color: #FCE4EC;
+}
+
+body.light-mode .project-card {
+    background-color: #F8D7E3;
+}
+
+body.light-mode footer {
+    background-color: #FCE4EC;
+}
+
