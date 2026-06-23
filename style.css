@@ -66,6 +66,13 @@ nav a{
     border-bottom: 3px solid transparent;
 }
 
+.hamburger {
+    display: none;
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+}
+
 
 nav a:hover {
     color: rgb(255, 0, 144);
@@ -75,18 +82,24 @@ nav a:hover {
 /*NOTE: Should remove the hover underline and make text increase in size. Make the light bulb glows into a color*/
 
 @media (max-width: 995px){
-    nav {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 40%;
-        border-left: 3px;
-        border-bottom: 3px;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem;
-        background-color: #720137;
-        border-top: 0.1rem solid;
+    .hamburger {
+        display: block;
     }
+
+#nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 60%;
+    flex-direction: column;
+    background-color: #720137;
+    padding: 1rem;
+    display: none;   /* hidden by default on mobile */
+}
+
+#nav-links.active {
+    display: flex;   /* shown when JS adds the 'active' class */
+}
 
     .logo {
         margin-bottom: 1rem;
@@ -595,3 +608,57 @@ body.light-mode footer {
     background-color: #FCE4EC;
 }
 
+/* ---- Mobile responsiveness ---- */
+@media (max-width: 768px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image {
+        order: -1;
+        flex: 0 0 auto;
+        max-width: 250px;
+        margin: 0 auto 2rem;
+    }
+
+    .experience-card,
+    .experience-card.reverse {
+        flex-direction: column;
+    }
+
+    .experience-image {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .experience-text {
+        margin-left: 0;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-connect-icons {
+        justify-content: center;
+    }
+
+    nav a {
+        margin-left: 1.5rem;
+    }
+}
