@@ -81,46 +81,16 @@ nav a:hover {
 
 /*NOTE: Should remove the hover underline and make text increase in size. Make the light bulb glows into a color*/
 
-@media (max-width: 995px){
-    .hamburger {
-        display: block;
-    }
-
-#nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 60%;
-    flex-direction: column;
-    background-color: #720137;
-    padding: 1rem;
-    display: none;   /* hidden by default on mobile */
-}
-
-#nav-links.active {
-    display: flex;   /* shown when JS adds the 'active' class */
-}
-
-    .logo {
-        margin-bottom: 1rem;
-    }
-
-    nav a {
-        margin-left: 0;
-        margin-bottom: 1rem;
-    }
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    padding-top: 10rem;
 }
 
 nav a:hover,
 nav a.active {
     padding: 1rem;
     border-radius: 0.5rem;
-    }
-
-section{
-    min-height: 100vh;
-    padding: 5rem 9% 5rem;
-    padding-top: 10rem;
 }
 
 /*body settings*/
@@ -608,11 +578,58 @@ body.light-mode footer {
     background-color: #FCE4EC;
 }
 
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.light-mode nav a,
+body.light-mode .contact-links a,
+body.light-mode .footer-links a,
+body.light-mode .home-content h2,
+body.light-mode .home-content h3,
+body.light-mode footer p {
+    color: #3D0017;
+}
+
+body.light-mode .contact h3 {
+    color: #3D0017;
+}
+
+    body.light-mode .project-card a h3 {
+    color: #3D0017;
+}
+
+body.light-mode .project-card p {
+    color: #3D0017;
+}
+
+body.light-mode .experience-image {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #FFF5F9;
+}
+
 /* ---- Mobile responsiveness ---- */
 @media (max-width: 768px) {
 
-    html {
-        font-size: 55%;
+    html { font-size: 55%; }
+
+    .hamburger { display: block; }
+
+    #nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 60%;
+        flex-direction: column;
+        background-color: #720137;
+        padding: 1rem;
+        display: none;
+    }
+
+    #nav-links.active { display: flex; }
+
+    nav a {
+        margin-left: 0;
+        margin-bottom: 1rem;
     }
 
     .home {
@@ -620,9 +637,7 @@ body.light-mode footer {
         text-align: center;
     }
 
-    .about {
-        flex-direction: column;
-    }
+    .about { flex-direction: column; }
 
     .about-image {
         order: -1;
@@ -631,34 +646,57 @@ body.light-mode footer {
         margin: 0 auto 2rem;
     }
 
+    .about-image {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;  /* ← keeps your face in frame, not cropped */
+}
+
     .experience-card,
-    .experience-card.reverse {
-        flex-direction: column;
-    }
+    .experience-card.reverse { flex-direction: column; }
 
     .experience-image {
         flex: 0 0 auto;
         width: 100%;
     }
 
-    .experience-text {
-        margin-left: 0;
-    }
+    .experience-image img { height: 250px; }
 
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
+    .experience-text { margin-left: 0; }
+
+    .project-grid { grid-template-columns: 1fr; }
 
     footer {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .footer-connect-icons {
-        justify-content: center;
+    .footer-tagline,
+    .footer-links,
+    .footer-connect {
+        align-items: center;
+        text-align: center;
+        width: 100%;
     }
 
-    nav a {
-        margin-left: 1.5rem;
-    }
+    .footer-connect-icons { justify-content: center; }
+
+.footer-tagline p {
+    max-width: 100%;
+    text-align: center;
+}
+
+footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;  /* ← add this */
+}
 }
