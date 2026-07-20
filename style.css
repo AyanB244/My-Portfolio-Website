@@ -213,7 +213,7 @@ button:hover {
 
 /* Experience */
 .experience {
-    padding-top: 10rem;
+    padding-top: 8rem;
     min-height: 100vh;
 }
 
@@ -222,9 +222,9 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 }
 
 .experience-card.reverse {
@@ -232,14 +232,14 @@ button:hover {
 }
 
 .experience h2 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: #E506A2;
 }
 
 .experience-image {
-    flex: 0 0 600px;
+    flex: 0 0 380px;
     max-width: 100%;
     border-radius: 1rem;
     overflow: hidden;
@@ -253,16 +253,16 @@ button:hover {
 }
 
 .experience-subtitle {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 400;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .experience-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.3;
-    margin-bottom: 5rem;
+    margin-bottom: 0;
     margin-top: 1rem;
     margin-left: 1.5rem;
     flex: 1;
@@ -270,9 +270,9 @@ button:hover {
 
 .experience-text ul li {
     list-style: none;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    padding: 0.7rem;
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+    padding: 0.4rem;
     padding-left: 2rem;
     text-indent: -2.7rem;
 }
@@ -284,24 +284,24 @@ button:hover {
 }
 
 .experience-text h3 {
-    font-size: 4rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .experience-text h4 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
     color: #E506A2;
 }
 
 .exp-date {
     font-family: 'Intel One Mono', monospace;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 400;
     opacity: 0.65;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 /* Projects */
@@ -349,13 +349,13 @@ button:hover {
 .project-card a h3 {
     font-size: 2.2rem;
     font-weight: 700;
-    color: white;
+    color: #E506A2;
     margin-bottom: 1rem;
     transition: 0.3s ease;
 }
 
 .project-card a h3:hover {
-    color: #E506A2;
+    color: white;
 }
 
 .project-card p {
@@ -450,7 +450,7 @@ button:hover {
 
 .say-hello-btn {
     padding: 1.2rem 3rem;
-    background-color: #E506A2;
+    background-color: #DF1F72;
     color: white;
     border-radius: 0.8rem;
     font-size: 1.8rem;
@@ -480,6 +480,10 @@ footer {
     max-width: 200px;
     line-height: 1.5;
     color: white;
+}
+
+.footer-tagline .highlight-pink {
+    color: #E506A2;
 }
 
 .footer-links {
@@ -553,6 +557,14 @@ body.light-mode header {
     background-color: #FCE4EC;
 }
 
+body.light-mode .hamburger {
+    color: black;
+}
+
+body.light-mode #nav-links {
+    background-color: #FCE4EC;
+}
+
 body.light-mode .project-card {
     background-color: #F8D7E3;
 }
@@ -565,9 +577,14 @@ body.light-mode nav a,
 body.light-mode .contact-links a,
 body.light-mode .footer-links a,
 body.light-mode .home-content h2,
-body.light-mode .home-content h3,
 body.light-mode footer p {
     color: #3D0017;
+}
+
+body.light-mode nav a:hover,
+body.light-mode .contact-links a:hover,
+body.light-mode .footer-links a:hover {
+    color: #E506A2;
 }
 
 body.light-mode .contact h3 {
@@ -575,6 +592,10 @@ body.light-mode .contact h3 {
 }
 
 body.light-mode .project-card a h3 {
+    color: #E506A2;
+}
+
+body.light-mode .project-card a h3:hover {
     color: #3D0017;
 }
 
@@ -597,11 +618,16 @@ body.light-mode .experience-image {
     #nav-links {
         position: absolute;
         top: 100%;
-        right: 0;
-        width: 60%;
+        right: 9%;
+        width: 55%;
+        max-width: 260px;
         flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
         background-color: #720137;
-        padding: 1rem;
+        padding: 2rem;
+        border-radius: 0 0 1rem 1rem;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         display: none;
     }
 
@@ -609,7 +635,6 @@ body.light-mode .experience-image {
 
     nav a {
         margin-left: 0;
-        margin-bottom: 1rem;
     }
 
     .home {
